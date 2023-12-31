@@ -26,12 +26,12 @@ int recursiveBinarySearch(int arr[], int target, int low, int high)
 int main() 
 {
 
-    int arraySize;
+    int size;
     printf("Enter the size of the array: "); 
-    scanf("%d", &arraySize);
-    int myArray[arraySize];
-    printf("Enter %d elements for the array:\n", arraySize);
-    for (int i = 0; i < arraySize; ++i) 
+    scanf("%d", &size);
+    int myArray[size];
+    printf("Enter %d elements for the array:\n", size);
+    for (int i = 0; i < size; ++i) 
     { 
         printf("Element %d: ", i + 1); 
         scanf("%d", &myArray[i]);
@@ -41,7 +41,7 @@ int main()
     printf("Enter the target element to search: "); 
     scanf("%d", &targetElement);
 
-    int result = recursiveBinarySearch(myArray, targetElement, 0, arraySize);
+    int result = recursiveBinarySearch(myArray, targetElement, 0, size);
     if (result != -1) 
     {
         printf("Element %d found at index %d.\n", targetElement, result);
